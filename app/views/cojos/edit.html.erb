@@ -1,0 +1,18 @@
+<h1> Editing <%=@dojo.branch%> </h1>
+<% if @errors%>
+    <%@errors.each do |error|%>
+        <p><%=error %> </p>
+    <% end %>
+<% end %>
+<form action="../<%= @dojo['id']%>/update" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden">
+    <p>Branch: <input type="text" name="dojo[branch]" value="<%= @dojo['branch']%>"></p>
+    <p>Street: <input type="text" name="dojo[street]" value="<%= @dojo['street']%>"></p>
+    <p>City: <input type="text" name="dojo[city]" value="<%= @dojo['city']%>"></p>
+    <p>State: <input type="text" name="dojo[state]" value="<%= @dojo['state']%>"></p>
+    <input type="submit" placeholder="Submit">
+</form>
+
+<p> <a href="/">Home</a> | <a href="dojos/show/<%= @dojo['id']%>">Show</a> </p>
+
