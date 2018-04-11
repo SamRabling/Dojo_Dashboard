@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
   
-  root 'cojos#index' 
+  # root 'cojos#index' 
 
-  get 'dojos/new' => 'cojos#new'
+  # get 'dojos/new' => 'cojos#new'
 
-  get 'dojos/show/:id' => 'cojos#show'
+  # get 'dojos/show/:id' => 'cojos#show'
 
-  post 'dojos/create' => 'cojos#create' 
+  # post 'dojos/create' => 'cojos#create' 
 
-  get 'dojos/:id/edit' => 'cojos#edit'
+  # get 'dojos/:id/edit' => 'cojos#edit'
 
-  patch 'dojos/:id/update' => 'cojos#update'
+  # patch 'dojos/:id/update' => 'cojos#update'
 
-  delete 'dojos/:id/destroy' => 'cojos#destroy'
+  # delete 'dojos/:id/destroy' => 'cojos#destroy'
 
   resources :dojos do
     resources :students

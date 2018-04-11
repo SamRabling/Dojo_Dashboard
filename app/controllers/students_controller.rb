@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
   def index
     @dojo = Dojo.find(params[:dojo_id])
-    @students = dojo.students.all
+    @students = @dojo.students.all
   end
 
   def new
