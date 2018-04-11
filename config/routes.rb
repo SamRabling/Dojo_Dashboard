@@ -18,19 +18,7 @@ Rails.application.routes.draw do
     resources :students
   end
 
-  get 'dojos/:dojo_id/students' => 'students#index'
 
-  get 'dojos/:dojo_id/students/new' => 'students#new'
-
-  post 'dojos/:dojo_id/students/create' => 'students#create'
-  
-  get 'dojos/:dojo_id/students/show' => 'students#show'
-
-  get 'dojos/:dojo_id/students/edit' => 'students#edit'
-  
-  patch 'dojos/:dojo_id/students/update' => 'students#update'
-
-  delete 'dojos/:dojo_id/students/destroy' => 'students#destroy'
 
   
 
